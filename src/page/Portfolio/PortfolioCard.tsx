@@ -3,10 +3,10 @@ import { useNavigate } from "react-router-dom"
 import cx from "classnames"
 
 interface Props {
-    datum: PreviewCardDatum
+    datum: PortfolioCardDatum
 }
 
-const PreviewCard = (props: Props) => {
+const PortfolioCard = (props: Props) => {
     const [isActive, setIsActive] = useState<boolean>(false)
     const { datum } = props
     const { img, title, paragraph, link } = datum
@@ -28,4 +28,4 @@ const PreviewCard = (props: Props) => {
 
 }
 
-export default PreviewCard
+export default PortfolioCard

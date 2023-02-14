@@ -1,16 +1,16 @@
 import { useState } from "react"
-import PreviewCard from "./PreviewCard"
+import PortfolioCard from "./PortfolioCard"
 
 
-const PreviewList = () => {
-    const [data, setData] = useState<PreviewCardDatum[]>(PreviewCardData)
+const PortfolioList = () => {
+    const [data, setData] = useState<PortfolioCardDatum[]>(PortfolioCardData)
 
     return (
         <>
-            <article className="preview-wrapper">
+            <article className="portfolio-wrapper">
                 {data.map((datum, index) => {
                     return (
-                        <PreviewCard datum={datum} key={index} />
+                        <PortfolioCard datum={datum} key={index} />
                     )
                 })}
             </article>
@@ -18,10 +18,10 @@ const PreviewList = () => {
     )
 }
 
-export default PreviewList
+export default PortfolioList
 
 
-const PreviewCardData = [
+const PortfolioCardData = [
     {
         img: require("../../assets/image/profile.jpeg").default,
         title: "이력서",

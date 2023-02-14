@@ -1,8 +1,8 @@
 import { FC } from "react"
-import Preview from "page/Preview"
+import Portfolio from "src/page/Portfolio"
 
 const App: FC = () => {
-    return (<Preview />)
+    return (<Portfolio />)
 }
 export default App
 

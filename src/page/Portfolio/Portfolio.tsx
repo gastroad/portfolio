@@ -1,13 +1,13 @@
-import PreviewList from "./PreviewList"
+import PortfolioList from "./PortfolioList"
 
-const preview = () => {
+const Portfolio = () => {
     return (
         <>
             {/* <header>portfolio</header> */}
             <section>
-                <PreviewList />
+                <PortfolioList />
             </section>
         </>
     )
 }
-export default preview 
+export default Portfolio 
