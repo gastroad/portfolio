@@ -3,12 +3,14 @@ import { useSelector } from 'react-redux'
 
 import PortfolioList from "./PortfolioList"
 import { RootState, useAppDispatch } from "../../store"
-
 import { fetchPortfolioList } from "../../api/request"
+import LoadingSpinner from "components/LoadingSpinner/LoadingSpinner"
+
+
 
 const Portfolio: FC = () => {
     const portfolio = useSelector((state: RootState) => state.portfolio)
-    const { portfolioList } = portfolio
+    const { portfolioList, status } = portfolio
     const dispatch = useAppDispatch()
 
     useEffect(() => {
@@ -17,6 +19,7 @@ const Portfolio: FC = () => {
 
     return (
         <>
+            {status === "PENDDING" && <LoadingSpinner />}
             <section>
                 <PortfolioList portfolioList={portfolioList} />
             </section>
