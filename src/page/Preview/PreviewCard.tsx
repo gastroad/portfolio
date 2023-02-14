@@ -9,11 +9,12 @@ interface Props {
 const PreviewCard = (props: Props) => {
     const [isActive, setIsActive] = useState<boolean>(false)
     const { datum } = props
-    const { img, title, paragraph } = datum
+    const { img, title, paragraph, link } = datum
 
 
     const handleCardClick = (e: React.MouseEvent<HTMLElement>) => {
         setIsActive(!isActive)
+        window.open(link)
     }
     return (
         <div className={cx("card", { "fade-out": isActive })} onClick={handleCardClick} >
