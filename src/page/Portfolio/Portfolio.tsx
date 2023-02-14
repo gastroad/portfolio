@@ -1,8 +1,8 @@
-import { useSelector, useDispatch } from 'react-redux'
+import { useSelector } from 'react-redux'
 import { useEffect } from 'react'
 
 import PortfolioList from "./PortfolioList"
-import { RootState, useAppDispatch, AppDispatch } from "../../store"
+import { RootState, useAppDispatch } from "../../store"
 
 import { fetchPortfolioListData } from "../../api/request"
 

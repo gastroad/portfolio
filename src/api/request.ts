@@ -1,6 +1,5 @@
-import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
+import { createAsyncThunk } from '@reduxjs/toolkit'
 import { portfolioCardData } from "./mockData"
-// import { userAPI } from './userAPI'
 
 const fetchPortfolioListData = createAsyncThunk(
     'fetchPortfolioListData',

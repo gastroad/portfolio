@@ -14,7 +14,7 @@ export const portfolioSlice = createSlice({
         builder.addCase(fetchPortfolioListData.pending, (state, action) => {
             console.log("pendding")
         })
-        builder.addCase(fetchPortfolioListData.rejected, (state, action) => {
+        builder.addCase(fetchPortfolioListData.rejected, () => {
             console.log("rejected")
         })
     },
@@ -22,4 +22,3 @@ export const portfolioSlice = createSlice({
 })
 
 export default portfolioSlice.reducer
-// export const { } = portfolioSlice.actions
