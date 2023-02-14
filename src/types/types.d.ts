@@ -1,4 +1,4 @@
-declare interface PortfolioCardDatum {
+declare interface PortfolioCard {
     img: string
     title: string
     paragraph: string

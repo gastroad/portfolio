@@ -2,12 +2,13 @@ import { useDispatch } from 'react-redux'
 
 
 import { configureStore } from '@reduxjs/toolkit'
-import portfolioReducer from "./slice/portfolioSlice"
+import portfolioSlice from "./slice/portfolioSlice"
 
 const store = configureStore({
-    reducer: { portfolio: portfolioReducer }
+    reducer: { portfolio: portfolioSlice.reducer }
 })
 export default store
+
 
 export type RootState = ReturnType<typeof store.getState>
 

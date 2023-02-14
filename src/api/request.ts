@@ -1,17 +1,17 @@
 import { createAsyncThunk } from '@reduxjs/toolkit'
 import { portfolioCardData } from "./mockData"
 
-const fetchPortfolioListData = createAsyncThunk(
-    'fetchPortfolioListData',
+const fetchPortfolioList = createAsyncThunk(
+    'fetchPortfolioList',
     async () => {
-        return await getPortfolioCardData();
+        return await getPortfolioList();
     },
 );
 
-const getPortfolioCardData = async (): Promise<PortfolioCardDatum[]> => {
+const getPortfolioList = async (): Promise<PortfolioCard[]> => {
     return new Promise(resolve => {
         setTimeout(() => { resolve(portfolioCardData) }, 1000)
     })
 }
 
-export { fetchPortfolioListData }
+export { fetchPortfolioList }

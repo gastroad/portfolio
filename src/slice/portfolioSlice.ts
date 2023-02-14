@@ -1,24 +1,26 @@
 import { createSlice } from '@reduxjs/toolkit'
-import { fetchPortfolioListData } from "../api/request"
+import { fetchPortfolioList } from "../api/request"
 
 export const portfolioSlice = createSlice({
     name: 'portfolio',
     initialState: {
-        PortfolioCardData: [{ img: "", title: "", paragraph: "", link: "" }]
+        portfolioList: [{ img: "", title: "", paragraph: "", link: "" }],
+        status: "PENDDING"
     },
     reducers: {},
     extraReducers: (builder) => {
-        builder.addCase(fetchPortfolioListData.fulfilled, (state, action) => {
-            state.PortfolioCardData = action.payload
+        builder.addCase(fetchPortfolioList.fulfilled, (state, action) => {
+            state.portfolioList = action.payload
+            state.status = "FULFILLED"
         })
-        builder.addCase(fetchPortfolioListData.pending, (state, action) => {
-            console.log("pendding")
+        builder.addCase(fetchPortfolioList.pending, (state) => {
+            state.status = "PENDDING"
         })
-        builder.addCase(fetchPortfolioListData.rejected, () => {
-            console.log("rejected")
+        builder.addCase(fetchPortfolioList.rejected, (state) => {
+            state.status = "REJECTED"
         })
     },
 
 })
 
-export default portfolioSlice.reducer
+export default portfolioSlice

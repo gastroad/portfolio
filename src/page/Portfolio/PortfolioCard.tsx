@@ -1,17 +1,16 @@
-import { useState } from "react"
+import { useState, FC } from "react"
 import cx from "classnames"
 
 interface Props {
-    datum: PortfolioCardDatum
+    portfolioCard: PortfolioCard
 }
 
-const PortfolioCard = (props: Props) => {
+const PortfolioCard: FC<Props> = (props) => {
     const [isActive, setIsActive] = useState<boolean>(false)
-    const { datum } = props
-    const { img, title, paragraph, link } = datum
+    const { portfolioCard } = props
+    const { img, title, paragraph, link } = portfolioCard
 
-
-    const handleCardClick = (e: React.MouseEvent<HTMLElement>) => {
+    const handleCardClick = () => {
         setIsActive(!isActive)
         window.open(link)
     }
