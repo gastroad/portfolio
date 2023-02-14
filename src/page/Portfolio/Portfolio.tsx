@@ -1,11 +1,23 @@
+import { useSelector, useDispatch } from 'react-redux'
+import { useEffect } from 'react'
+
 import PortfolioList from "./PortfolioList"
+import { RootState, useAppDispatch, AppDispatch } from "../../store"
+
+import { fetchPortfolioListData } from "../../api/request"
 
 const Portfolio = () => {
+    const portfolio = useSelector((state: RootState) => state.portfolio)
+    const dispatch = useAppDispatch()
+
+    useEffect(() => {
+        dispatch(fetchPortfolioListData())
+    }, [])
+
     return (
         <>
-            {/* <header>portfolio</header> */}
             <section>
-                <PortfolioList />
+                <PortfolioList PortfolioCardData={portfolio.PortfolioCardData} />
             </section>
         </>
     )
