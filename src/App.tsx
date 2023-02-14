@@ -6,6 +6,7 @@ import store from "./store"
 const App: FC = () => {
     return (
         <Provider store={store}>
+            <div id={"root-modal"} />
             <Portfolio />
         </Provider>
     )
