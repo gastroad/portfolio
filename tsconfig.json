@@ -18,8 +18,8 @@
             "page/*": [
                 "./src/page/*"
             ],
-            "utils/*": [
-                "./src/utils/*"
+            "api/*": [
+                "./src/api/*"
             ],
             "assets/*": [
                 "./src/assets/*"

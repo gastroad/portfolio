@@ -1,4 +1,5 @@
 import { createAsyncThunk } from '@reduxjs/toolkit'
+
 import { portfolioCardData } from "./mockData"
 
 const fetchPortfolioList = createAsyncThunk(

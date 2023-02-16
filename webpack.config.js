@@ -14,7 +14,7 @@ module.exports = {
             src: path.resolve(__dirname, 'src/'),
             components: path.resolve(__dirname, 'src/components/'),
             page: path.resolve(__dirname, 'src/page/'),
-            utils: path.resolve(__dirname, 'src/utils/'),
+            api: path.resolve(__dirname, 'src/api/'),
             assets: path.resolve(__dirname, 'src/assets/'),
         },
         extensions: ['.ts', '.tsx', '.js', '.jsx', '.json']

@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit'
-import { fetchPortfolioList } from "../api/request"
+import { fetchPortfolioList } from "api/request"
 
 export const portfolioSlice = createSlice({
     name: 'portfolio',

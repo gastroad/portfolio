@@ -1,7 +1,8 @@
 import { FC } from "react"
 import { Provider } from 'react-redux'
-import Portfolio from "src/page/Portfolio"
-import store from "./store"
+
+import Portfolio from "page/Portfolio"
+import store from "src/store"
 
 const App: FC = () => {
     return (

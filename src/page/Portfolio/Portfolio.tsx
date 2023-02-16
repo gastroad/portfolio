@@ -1,11 +1,11 @@
 import { useEffect, FC } from 'react'
 import { useSelector } from 'react-redux'
 
-import PortfolioList from "./PortfolioList"
-import { RootState, useAppDispatch } from "../../store"
-import { fetchPortfolioList } from "../../api/request"
+import { RootState, useAppDispatch } from "src/store"
+import { fetchPortfolioList } from "api/request"
 import LoadingSpinner from "components/LoadingSpinner/LoadingSpinner"
 
+import PortfolioList from "./PortfolioList"
 
 
 const Portfolio: FC = () => {

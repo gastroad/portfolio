@@ -1,7 +1,6 @@
 import { useDispatch } from 'react-redux'
-
-
 import { configureStore } from '@reduxjs/toolkit'
+
 import portfolioSlice from "./slice/portfolioSlice"
 
 const store = configureStore({
