@@ -1,7 +1,7 @@
 import { useEffect, FC } from 'react'
 import { useSelector } from 'react-redux'
 
-import { RootState, useAppDispatch } from "src/store"
+import { RootState, useAppDispatch } from "src/store/store"
 import { fetchPortfolioList } from "api/request"
 import LoadingSpinner from "components/LoadingSpinner/LoadingSpinner"
 
@@ -9,7 +9,7 @@ import PortfolioList from "./PortfolioList"
 
 
 const Portfolio: FC = () => {
-    const portfolio = useSelector((state: RootState) => state.portfolio)
+    let portfolio = useSelector((state: RootState) => state.portfolio)
     const { portfolioList, status } = portfolio
     const dispatch = useAppDispatch()
 
