@@ -11,7 +11,7 @@ const portfolioCardData = [
         link: "https://github.com/gastroad"
     }, {
         img: require("../assets/image/github.png").default,
-        title: "GitHub",
+        title: "Git blog",
         paragraph: "개인 blog 입니다.",
         link: "https://gastroad.github.io"
     }, {
